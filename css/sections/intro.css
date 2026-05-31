@@ -1,0 +1,154 @@
+/* ── Greeting 섹션 전체 ── */
+.greeting {
+  position: relative;
+  background-color: #ddeaf5; /* 연한 하늘색 */
+  overflow: hidden;
+}
+
+/* ── 종이 질감 배경 ── */
+.greeting__texture {
+  position: absolute;
+  inset: 0;
+  background-image: url('asset/image/texture.png');
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.45;       /* 질감 강도 조절 — 너무 강하면 낮춰요 */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── 상하 그라데이션 페이드 ── */
+.greeting__fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;       /* 페이드 범위 — 조절 가능 */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.greeting__fade--top {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.greeting__fade--bottom {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* ── 내부 콘텐츠 래퍼 ── */
+.greeting__inner {
+  position: relative;
+  z-index: 2;          /* texture·fade 위에 */
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Divider 이미지 ── */
+.greeting__divider {
+  padding: 2rem 0 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.greeting__divider img {
+  height: 20px;
+  width: auto;
+  opacity: 0.7;
+}
+
+/* ── Invitation 타이틀 ── */
+.greeting__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  color: #3a3028;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ── 인사말 텍스트 ── */
+.greeting__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+
+.greeting__text p {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.88rem, 3.5vw, 0.97rem);
+  font-weight: 300;
+  color: #3a3028;
+  line-height: 1.95;
+  letter-spacing: 0.02em;
+  word-break: keep-all;
+}
+
+/* ── 반지 사진 (풀 width) ── */
+.greeting__photo {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.greeting__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── 혼주 정보 ── */
+.greeting__parents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem 0 0.5rem;
+  text-align: center;
+}
+
+.greeting__parent-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.greeting__parent-name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.92rem, 3.8vw, 1rem);
+  font-weight: 500;
+  color: #3a3028;
+  letter-spacing: 0.03em;
+}
+
+.greeting__parent-rel {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.78rem, 3vw, 0.85rem);
+  font-weight: 300;
+  color: #8c7b6e;
+}
+
+.greeting__parent-child {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.92rem, 3.8vw, 1rem);
+  font-weight: 600;
+  color: #3a3028;
+  letter-spacing: 0.03em;
+}

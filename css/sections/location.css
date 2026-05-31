@@ -1,0 +1,149 @@
+/* ── Location 섹션 ── */
+.location {
+  background: #ffffff;
+  padding: 3rem 0 1.5rem;
+}
+
+.location__inner {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* 타이틀 */
+.location__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  color: #2c3e6b;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* 예식장명 */
+.location__venue-name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(1rem, 4.2vw, 1.2rem);
+  font-weight: 600;
+  color: #3a3028;
+  line-height: 1.65;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* 주소 */
+.location__address {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.82rem, 3.3vw, 0.92rem);
+  font-weight: 300;
+  color: #8c7b6e;
+  line-height: 1.8;
+  text-align: center;
+  font-style: normal;
+  word-break: keep-all;
+}
+
+/* 약도 이미지 */
+.location__map-img {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0ebe3;
+  /* aspect-ratio 제거 — 이미지 원본 비율대로 높이가 결정됨 */
+}
+
+.location__map-img img {
+  display: block;
+  width: 100%;
+  height: auto;             /* ← 원본 비율 유지 */
+  /* object-fit 제거 */
+}
+
+/* 길찾기 버튼 그룹 */
+.location__nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 버튼 공통 — <button>과 <a> 모두 동일하게 */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background: #f5f5f5;
+  border-radius: 16px;
+  border: 1.5px solid #e8e0d8;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s;
+  /* <button> 기본 스타일 리셋 */
+  padding: 0;
+  font: inherit;
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+  background: #ede8e3;
+}
+
+.nav-btn__icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  object-fit: contain;
+}
+
+/* 교통편 안내 전체 */
+.location__transport {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding-top: 0.5rem;
+}
+
+/* 교통편 항목 */
+.transport__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 교통편 제목 (자가용 이용 시 등) */
+.transport__type {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+  font-weight: 700;
+  color: #3a3028;
+  letter-spacing: 0.02em;
+}
+
+/* 교통편 본문 */
+.transport__desc {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.82rem, 3.3vw, 0.92rem);
+  font-weight: 300;
+  color: #5a4e44;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+
+/* 하단 divider */
+.location__divider {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 0.5rem;
+}
+
+.location__divider img {
+  height: 20px;
+  width: auto;
+  opacity: 0.7;
+}

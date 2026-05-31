@@ -1,0 +1,217 @@
+/* ── Account 섹션 ── */
+.account {
+  background: #ffffff;
+  padding: 3rem 0 1.5rem;
+}
+
+.account__inner {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.account__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  color: #2c3e6b;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.account__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.account__desc p {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+  font-weight: 300;
+  color: #5a4e44;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+
+/* ── 아코디언 래퍼 ── */
+.accordion {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  background: #ffffff;
+}
+
+/* ── 아코디언 트리거 ── */
+.accordion__trigger {
+  width: 100%;
+  padding: 1.2rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.accordion__trigger:hover {
+  background: #faf7f4;
+}
+
+.accordion__label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* 신랑측/신부측 텍스트 */
+.accordion__badge {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+  font-weight: 500;
+  color: #3a3028;
+  letter-spacing: 0.04em;
+}
+
+/* 골드 왼쪽 라인 — 열렸을 때 표시 */
+.accordion__trigger[aria-expanded="true"] .accordion__badge::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: #c9a96e;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* 화살표 아이콘 */
+.accordion__icon {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #c9a96e;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.accordion__trigger[aria-expanded="true"] .accordion__icon {
+  transform: rotate(180deg);
+}
+
+/* ── 패널 (max-height 애니메이션) ── */
+.accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion__panel-inner {
+  border-top: 1px solid #f0ebe3;
+  padding: 0.25rem 0;
+}
+
+/* ── 계좌 항목 ── */
+.account-item {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-bottom: 1px solid #f8f4f0;
+}
+
+.account-item:last-child {
+  border-bottom: none;
+}
+
+.account-item__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-item__relation {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.78rem, 3vw, 0.85rem);
+  font-weight: 400;
+  color: #8c7b6e;
+  letter-spacing: 0.03em;
+}
+
+.account-item__number {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.88rem, 3.5vw, 0.95rem);
+  font-weight: 300;
+  color: #3a3028;
+  letter-spacing: 0.02em;
+}
+
+/* 복사 버튼 */
+.account-item__copy {
+  padding: 0.3rem 0.85rem;
+  background: #f5f0ea;
+  border: 1px solid #e8ddd5;
+  border-radius: 20px;        /* pill 형태 */
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #8c7b6e;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.account-item__copy:hover {
+  background: #c9a96e;
+  color: #ffffff;
+  border-color: #c9a96e;
+}
+
+.account-item__copy:active {
+  transform: scale(0.95);
+}
+
+/* ── 하단 divider ── */
+.account__divider {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 0.5rem;
+}
+
+.account__divider img {
+  height: 20px;
+  width: auto;
+  opacity: 0.7;
+}
+
+/* ── 토스트 ── */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background: rgba(44, 62, 107, 0.92);
+  color: #ffffff;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

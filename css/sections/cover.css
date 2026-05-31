@@ -1,0 +1,102 @@
+/* ── Cover 섹션 전체 ── */
+.cover {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+/* min-height, height 일체 없음 — 콘텐츠 높이대로 자연스럽게 */
+
+/* ── 사진 영역 ── */
+.cover__photo {
+  position: relative;
+  width: 100%;
+  /* 세로 고정값 없음 — 이미지 비율대로 높이가 결정됨 */
+}
+
+.cover__bg {
+  display: block;
+  width: 100%;
+  height: auto;          /* ← 핵심: 이미지 원본 비율 유지 */
+  object-fit: unset;     /* cover 아님 — 비율 그대로 */
+}
+
+/* ── Our Beginning 타이틀 ── */
+.cover__title {
+  position: absolute;
+  top: 5%;               /* px 대신 % — 이미지 높이 기준 상대값 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  white-space: nowrap;
+
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ── 하단 정보 영역 ── */
+.cover__details {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 1.75rem 1.5rem 2rem;
+  text-align: center;
+  /* height, min-height 없음 */
+}
+
+/* 아래는 이전과 동일 */
+.cover__names {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.cover__role {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #8c7b6e;
+  letter-spacing: 0.05em;
+}
+
+.cover__name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #3a3028;
+  letter-spacing: 0.18em;
+  margin-right: 0.6rem;
+}
+
+.cover__name:last-child {
+  margin-right: 0;
+}
+
+.cover__line {
+  width: 36px;
+  height: 1px;
+  background: #c9a96e;
+}
+
+.cover__datetime {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #3a3028;
+  letter-spacing: 0.08em;
+}
+
+.cover__venue {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #8c7b6e;
+  letter-spacing: 0.04em;
+}

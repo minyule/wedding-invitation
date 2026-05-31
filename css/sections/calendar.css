@@ -1,0 +1,100 @@
+/* ── Calendar 섹션 ── */
+.calendar {
+  background: #ffffff;
+  padding: 3rem 0 1.5rem;
+}
+
+.calendar__inner {
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Wedding Day 타이틀 */
+.calendar__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  color: #2c3e6b;          /* 이미지의 네이비 계열 */
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* 2026년 08월 */
+.calendar__month {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.95rem, 4vw, 1.1rem);
+  font-weight: 400;
+  color: #3a3028;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* 테이블 */
+.calendar__table {
+  width: 100%;
+  max-width: 360px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 0.5rem;
+}
+
+/* 요일 헤더 */
+.calendar__table thead th {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.8rem, 3.2vw, 0.9rem);
+  font-weight: 400;
+  color: #8c7b6e;
+  text-align: center;
+  padding: 0.5rem 0 0.75rem;
+}
+
+.calendar__table thead th.col-sat { color: #4a7fbd; }
+.calendar__table thead th.col-sun { color: #c0392b; }
+
+/* 날짜 셀 */
+.calendar__table td {
+  text-align: center;
+  padding: 0.25rem 0;
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.1rem);
+  font-weight: 300;
+  color: #3a3028;
+}
+
+.calendar__table td.col-sat span { color: #4a7fbd; }
+.calendar__table td.col-sun span { color: #c0392b; }
+.calendar__table td.cal-empty   { background: transparent; }
+
+/* 날짜 숫자 span — 원형 배경을 위해 감쌈 */
+.calendar__table td span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+
+/* 결혼식 날 강조 */
+.calendar__table td.cal-wedding span {
+  background: #2c3e6b;
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* 하단 divider */
+.calendar__divider {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 0.5rem;
+}
+
+.calendar__divider img {
+  height: 20px;
+  width: auto;
+  opacity: 0.7;
+}

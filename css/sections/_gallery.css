@@ -1,0 +1,193 @@
+/* ── Gallery 섹션 ── */
+.gallery {
+  background: #ffffff;
+  padding: 3rem 0 1.5rem;
+}
+
+.gallery__header {
+  padding: 0 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.gallery__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  color: #2c3e6b;
+  letter-spacing: 0.2em;
+}
+
+/* 3열 그리드 */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* 그리드 아이템 버튼 */
+.gallery__item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #e8e0d8;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0;
+  border: none;
+  display: block;
+  position: relative;
+}
+
+.gallery__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery__item:hover img,
+.gallery__item:focus-visible img {
+  transform: scale(1.06);
+}
+
+.gallery__item:focus-visible {
+  outline: 2px solid #c9a96e;
+  outline-offset: 2px;
+}
+
+/* 하단 divider */
+.gallery__divider {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 0.5rem;
+}
+
+.gallery__divider img {
+  height: 20px;
+  width: auto;
+  opacity: 0.7;
+}
+
+/* ════════════════════════════
+   라이트박스
+════════════════════════════ */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.97);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+/* 라이트박스 열릴 때 body 스크롤 잠금 */
+body.lightbox-open {
+  overflow: hidden;
+  position: fixed;   /* iOS Safari 스크롤 고정 */
+  width: 100%;
+}
+
+/* 닫기 버튼 */
+.lightbox__close {
+  position: absolute;
+  top: max(env(safe-area-inset-top, 0px) + 0.75rem, 1rem);
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* 슬라이드 트랙 래퍼 */
+.lightbox__track-wrap {
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* 슬라이드 트랙 — 이미지들을 가로로 나열 */
+.lightbox__track {
+  display: flex;
+  width: 100%;
+  /* transition은 JS에서 동적으로 부여 */
+}
+
+.lightbox__track img {
+  min-width: 100%;
+  width: 100%;
+  max-height: 85svh;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;   /* 드래그 방지 */
+}
+
+/* 이전/다음 화살표 */
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.lightbox__arrow:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox__arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.lightbox__arrow--prev { left: 0.75rem; }
+.lightbox__arrow--next { right: 0.75rem; }
+
+/* 카운터 */
+.lightbox__counter {
+  position: absolute;
+  bottom: max(env(safe-area-inset-bottom, 0px) + 0.75rem, 1.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
