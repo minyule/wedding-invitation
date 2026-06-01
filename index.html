@@ -63,12 +63,12 @@
         <div class="greeting__inner">
 
           <!-- 상단 divider -->
-          <div class="greeting__divider">
+          <div class="divider">
             <img src="asset/image/divider.png" alt="" aria-hidden="true" />
           </div>
 
           <!-- 타이틀 -->
-          <h2 class="greeting__title">Invitation</h2>
+          <h2 class="title">Invitation</h2>
 
           <!-- 인사말 -->
           <div class="greeting__text">
@@ -102,7 +102,7 @@
           </div>
 
           <!-- 하단 divider -->
-          <div class="greeting__divider">
+          <div class="divider">
             <img src="asset/image/divider.png" alt="" aria-hidden="true" />
           </div>
 
@@ -116,7 +116,7 @@
       <section id="calendar" class="section calendar" aria-label="Wedding Day">
 
         <div class="calendar__inner">
-          <h2 class="calendar__title">Wedding Day</h2>
+          <h2 class="title">Wedding Day</h2>
           <p class="calendar__month" id="calMonthLabel"></p>
 
           <table class="calendar__table" role="grid" aria-label="2026년 8월 달력">
@@ -127,7 +127,7 @@
           </table>
         </div>
 
-        <div class="calendar__divider">
+        <div class="divider">
           <img src="asset/image/divider.png" alt="" aria-hidden="true" />
         </div>
 
@@ -138,7 +138,7 @@
         <div class="location__inner">
 
           <!-- 타이틀 -->
-          <h2 class="location__title">Location</h2>
+          <h2 class="title">Location</h2>
 
           <!-- 예식장명 -->
           <p class="location__venue-name">
@@ -245,22 +245,22 @@
         </div>
 
         <!-- 하단 divider -->
-        <div class="location__divider">
+        <div class="divider">
           <img src="asset/image/divider.png" alt="" aria-hidden="true" />
         </div>
 
       </section>
 
-      <section id="gallery" class="section gallery" aria-label="Gallery">
+      <section class="section gallery" aria-label="Gallery">
 
         <div class="gallery__header">
-          <h2 class="gallery__title">Gallery</h2>
+          <h2 class="title">Gallery</h2>
         </div>
 
         <!-- JS가 동적으로 채움 -->
         <div class="gallery__grid" id="galleryGrid" role="list"></div>
 
-        <div class="gallery__divider">
+        <div class="divider">
           <img src="asset/image/divider.png" alt="" aria-hidden="true" />
         </div>
 
@@ -309,7 +309,7 @@
       <section id="account" class="section account" aria-label="Account">
         <div class="account__inner">
 
-          <h2 class="account__title">Account</h2>
+          <h2 class="title">Account</h2>
 
           <div class="account__desc">
             <p>소중한 축복의 마음<br>진심으로 감사드립니다.</p>
@@ -352,7 +352,7 @@
 
         </div>
 
-        <div class="account__divider">
+        <div class="divider">
           <img src="asset/image/divider.png" alt="" aria-hidden="true" />
         </div>
 
@@ -365,194 +365,18 @@
 
       <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" defer></script>
 
-      <section class="share-section">
-        <h2 class="share-title">Share</h2>
+      <section class="share">
         
-        <div class="share-button-wrap">
-          <button type="button" class="btn-share" id="btnCopyLink">
-            링크 복사하기
-          </button>
-          <button type="button" class="btn-share" id="btnKakaoShare">
-            카카오톡으로 공유하기
-          </button>
-        </div>
-      </section>
-
-
-
-
-
-
-      <section id="info" class="section info" aria-label="Info">
-        <div class="info__container">
-          <div class="info__block info__names">
-            <p class="info__couple">
-              <span class="info__label">신랑</span>
-              <span class="info__name">최낙훈</span>
-              <span class="info__dot">·</span>
-              <span class="info__label">신부</span>
-              <span class="info__name">김민영</span>
-            </p>
-            <p class="info__parents">
-              신랑: 최명근 · 유정인 의 아들<br>
-              신부: 김종관 · 고명희 의 딸
-            </p>
-          </div>
-
-          <div class="info__divider" aria-hidden="true"></div>
-
-          <div class="info__block info__hosts">
-            <div class="info__host">
-              <p class="info__host-title">신랑측</p>
-              <p class="info__host-name">최명근 · 유정인</p>
-              <p class="info__host-role">장남</p>
-            </div>
-            <div class="info__host">
-              <p class="info__host-title">신부측</p>
-              <p class="info__host-name">김종관 · 고명희</p>
-              <p class="info__host-role">장녀</p>
-            </div>
-          </div>
-
-          <div class="info__divider" aria-hidden="true"></div>
-
-          <div class="info__block info__schedule">
-            <p class="info__date">2026년 08월 29일 토요일</p>
-            <p class="info__time">오후 1시 00분</p>
-            <p class="info__venue">라도무스아트웨딩홀 2F 아트리움홀</p>
-            <p class="info__address">대전 유성구 동서대로 839</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="invitation" class="section invitation" aria-label="Invitation">
-        <div class="invitation__wrapper">
-          <p class="invitation__title">Invitation</p>
-          <div class="invitation__divider" aria-hidden="true"></div>
-
-          <div class="invitation__text">
-            <p>봄의 끝자락에 만나 두 사람은,
-              붉어 오는 하늘에 저물을 보며 가까고 약속했습니다.</p>
-            <p>그 달콤하게 서로의 계절이 되어
-              가장 아름다운 시간을 함께했습니다.
-              비록 평범을 함께 걸어가고 합니다.</p>
-            <p>귀한 걸음으로
-              축복해주시면 감사하겠습니다.</p>
-          </div>
-
-          <div class="invitation__photo" role="img" aria-label="Invitation couple photo"></div>
-
-          <div class="invitation__names">
-            <div class="invitation__host">
-              <p class="invitation__parent">최명근 · 유정인 의 장남</p>
-              <p class="invitation__person">최낙훈</p>
-            </div>
-            <div class="invitation__host">
-              <p class="invitation__parent">김종관 · 고명희 의 장녀</p>
-              <p class="invitation__person">김민영</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="calendar" class="section calendar" aria-label="Calendar">
-        <div class="container">
-          <h2>Wedding Day</h2>
-          <div id="wedding-calendar"></div>
-        </div>
-      </section>
-
-      <section id="location" class="section location" aria-label="Location">
-        <div class="location__wrapper">
-          <h2>Location</h2>
-          <div class="location__place">
-            <p class="location__name">라도무스아트센터웨딩홀</p>
-            <p class="location__address">대전 유성구 동서대로 839</p>
-          </div>
-
-          <div id="map" class="location__map" data-lat="36.3637" data-lng="127.3358" data-name="라도무스아트센터웨딩홀"></div>
-
-          <div class="location__apps">
-            <button id="tmap-button" class="map-btn" type="button">🅣<span>T MAP</span></button>
-            <button id="kakaomap-button" class="map-btn" type="button">📍<span>카카오</span></button>
-            <button id="navermap-button" class="map-btn" type="button">🟢 N<span>네이버</span></button>
-          </div>
-
-          <div class="location__directions">
-            <div class="location__direction">
-              <p class="direction__title">자가용 이용 시</p>
-              <p class="direction__text">
-                내비게이션 : '라도무스 아트센터' 검색<br>
-                유성IC → 유성IC삼거리 → 구암역삼거리<br>
-                → 유성온천역사거리 → 목원대사거리 방향<br>
-                목원대사거리 지나 약 500m
-              </p>
-            </div>
-            <div class="location__direction">
-              <p class="direction__title">대중교통 이용 시</p>
-              <p class="direction__text">
-                지하철 : 유성온천역 6번 출구<br>
-                버스 : 106, 706번 이용<br>
-                106번 홍도초 하차 / 706번 등기소·아이파크시티 하차 후<br>
-                목원대사거리 방향 도보 약 500m
-              </p>
-            </div>
-            <div class="location__direction">
-              <p class="direction__title">도보 이용 시</p>
-              <p class="direction__text">
-                버스 하차 후 목원대사거리 방향 이동<br>
-                도로 따라 직진 약 500m 이동하시면 됩니다
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="gallery" class="section gallery" aria-label="Gallery">
-        <div class="gallery__header">
-          <h2>Gallery</h2>
-        </div>
-        <div id="gallery-root"></div>
-      </section>
-      <section id="account" class="section" aria-label="Account">
-        <div class="container">
-          <h2>Account</h2>
-          <div class="account__intro">
-            <p>소중한 축복의 마음 진심으로 감사드립니다.</p>
-            <p>부득이한 사정으로 참석하지 못하는 분들을 위해 계좌번호를 안내드립니다.</p>
-          </div>
-          <div class="account__accordion-wrap">
-            <div class="accordion-item is-groom">
-              <div class="accordion-header accordion__trigger" role="button" tabindex="0" aria-expanded="false" aria-controls="panelGroom">
-                <span>신랑측</span>
-                <span class="accordion-arrow" aria-hidden="true">⌄</span>
-              </div>
-              <div class="accordion-content" id="panelGroom" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                <div class="accordion__panel-inner"></div>
-              </div>
-            </div>
-
-            <div class="accordion-item is-bride">
-              <div class="accordion-header accordion__trigger" role="button" tabindex="0" aria-expanded="false" aria-controls="panelBride">
-                <span>신부측</span>
-                <span class="accordion-arrow" aria-hidden="true">⌄</span>
-              </div>
-              <div class="accordion-content" id="panelBride" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-                <div class="accordion__panel-inner"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-
-      
-
-      <section id="share" class="section" aria-label="Share">
-        <div class="container">
-          <h2>Share</h2>
-          <div class="share__btn-wrap">
-            <button id="btnCopyLink" class="btn-share" type="button">링크 복사하기</button>
-            <button id="btnKakaoShare" class="btn-share" type="button">카카오톡으로 공유하기</button>
+        <div class="share__inner">
+          <h2 class="title">Share</h2>
+          
+          <div class="share-button-wrap">
+            <button type="button" class="btn-share" id="btnCopyLink">
+              링크 복사하기
+            </button>
+            <button type="button" class="btn-share" id="btnKakaoShare">
+              카카오톡으로 공유하기
+            </button>
           </div>
         </div>
       </section>

@@ -2,29 +2,30 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  
+  background: #d2e0eb;
+  animation: pageReveal 2s ease forwards;
+}
+
+@keyframes pageReveal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* 공유 섹션 전체 컨테이너 */
-.share-section {
+.share {
+  background: var(--color-bg);
+  padding: 0rem 0 1.5rem;
+}
+
+.share__inner {
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* 상단 Share 타이틀 */
-.share-title {
-  font-family: 'Times New Roman', Times, serif; /* 이미지 특유의 클래식한 영문 서체 느낌 */
-  font-size: 32px;
-  font-weight: 500;
-  color: #2c445a; /* 차분하고 딥한 네이비 톤 */
-  margin-top: 0;
-  margin-bottom: 35px;
-  letter-spacing: 2px; /* 글자 사이 간격 넓힘 */
+  gap: 1.25rem;
 }
 
 /* 버튼들을 감싸는 랩퍼 */

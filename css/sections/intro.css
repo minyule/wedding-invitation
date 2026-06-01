@@ -31,7 +31,7 @@
   top: 0;
   background: linear-gradient(
     to bottom,
-    #ffffff 0%,
+    var(--color-bg) 0%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -40,7 +40,7 @@
   bottom: 0;
   background: linear-gradient(
     to top,
-    #ffffff 0%,
+    var(--color-bg) 0%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -53,31 +53,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* ── Divider 이미지 ── */
-.greeting__divider {
-  padding: 2rem 0 1.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.greeting__divider img {
-  height: 20px;
-  width: auto;
-  opacity: 0.7;
-}
-
-/* ── Invitation 타이틀 ── */
-.greeting__title {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.4rem, 5vw, 1.75rem);
-  color: #3a3028;
-  letter-spacing: 0.2em;
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 /* ── 인사말 텍스트 ── */

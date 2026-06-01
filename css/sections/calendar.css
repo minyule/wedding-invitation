@@ -1,7 +1,7 @@
 /* ── Calendar 섹션 ── */
 .calendar {
-  background: #ffffff;
-  padding: 3rem 0 1.5rem;
+  background: var(--color-bg);
+  padding: 0rem 0 1.5rem;
 }
 
 .calendar__inner {
@@ -10,17 +10,6 @@
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-}
-
-/* Wedding Day 타이틀 */
-.calendar__title {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.4rem, 5vw, 1.75rem);
-  color: #2c3e6b;          /* 이미지의 네이비 계열 */
-  letter-spacing: 0.2em;
-  text-align: center;
 }
 
 /* 2026년 08월 */
@@ -84,17 +73,4 @@
   background: #2c3e6b;
   color: #ffffff !important;
   font-weight: 500;
-}
-
-/* 하단 divider */
-.calendar__divider {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0 0.5rem;
-}
-
-.calendar__divider img {
-  height: 20px;
-  width: auto;
-  opacity: 0.7;
 }
