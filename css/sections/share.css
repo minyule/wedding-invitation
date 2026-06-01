@@ -1,23 +1,7 @@
-/* 기본 스타일 초기화 (필요시 사용) */
-body {
-  margin: 0;
-  padding: 0;
-  /* background-color: #ffffff; */
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-  
-  background: #d2e0eb;
-  animation: pageReveal 2s ease forwards;
-}
-
-@keyframes pageReveal {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
 /* 공유 섹션 전체 컨테이너 */
 .share {
   background: var(--color-bg);
-  padding: 0rem 0 1.5rem;
+  padding: 0rem 0 10rem;
 }
 
 .share__inner {
