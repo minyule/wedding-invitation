@@ -38,11 +38,11 @@ body{
   justify-content:center;
   background:linear-gradient(180deg,var(--color-accent-light),var(--color-accent))
 }
-.cover__title{
+/* .cover__title{
   font-family:var(--font-display);
   font-size:2rem;
   color:var(--color-white)
-}
+} */
 
 .gallery-grid{
   display:grid;
