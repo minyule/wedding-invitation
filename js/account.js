@@ -1,5 +1,7 @@
 // account.js
 
+import { showToast } from "./util.js";
+
 const ACCOUNTS = {
   groom: [
     { relation: '신랑',      bank: '국민은행', account: '100-0000-1111', holder: '최낙훈' },
@@ -85,16 +87,6 @@ async function copyText(text) {
     document.body.removeChild(el);
   }
   showToast('계좌번호가 복사되었습니다');
-}
-
-export function showToast(message) {
-  const toast = document.getElementById('copyToast');
-  if (!toast) return; // 토스트 엘리먼트가 없을 때 에러 방지
-  
-  toast.textContent = message;
-  toast.classList.add('is-visible');
-  clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2000);
 }
 
 // 최종 실행 함수

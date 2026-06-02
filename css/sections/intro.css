@@ -9,10 +9,10 @@
 .greeting__texture {
   position: absolute;
   inset: 0;
-  background-image: url('asset/image/texture.png');
+  background-image: url('/asset/image/texture.png');
   background-repeat: repeat;
   background-size: auto;
-  opacity: 0.45;       /* 질감 강도 조절 — 너무 강하면 낮춰요 */
+  opacity: 1;       /* 질감 강도 조절 — 너무 강하면 낮춰요 */
   pointer-events: none;
   z-index: 0;
 }

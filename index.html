@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sections/cover.css">
     <link rel="stylesheet" href="css/sections/intro.css">
-    <link rel="stylesheet" href="css/sections/info.css">
     <link rel="stylesheet" href="css/sections/invitation.css">
     <link rel="stylesheet" href="css/sections/calendar.css">
     <link rel="stylesheet" href="css/sections/gallery.css">
@@ -162,10 +161,13 @@
           <!-- 길찾기 버튼 3개 -->
           <div class="location__nav-buttons" role="group" aria-label="길찾기">
 
-            <!-- T MAP: 앱 스킴 → 미설치 시 웹 fallback은 JS에서 처리 -->
-            <button class="nav-btn" id="btnTmap" type="button" aria-label="T맵으로 길찾기">
+            <!-- T MAP -->
+            <a class="nav-btn"
+              href="https://tmap.life/d2eea2f4"
+              target="_blank" rel="noopener"
+              aria-label="T맵으로 길찾기">
               <img src="asset/image/icon-tmap.png" alt="T MAP" class="nav-btn__icon" />
-            </button>
+            </a>
 
             <!-- 카카오맵 -->
             <a class="nav-btn"
@@ -288,7 +290,7 @@
         </div>
 
         <!-- 이전/다음 버튼 -->
-        <button class="lightbox__arrow lightbox__arrow--prev" id="lightboxPrev"
+        <button class="lightbox__arrow lightbox__prev" id="lightboxPrev"
                 aria-label="이전 사진" type="button">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -296,7 +298,7 @@
           </svg>
         </button>
 
-        <button class="lightbox__arrow lightbox__arrow--next" id="lightboxNext"
+        <button class="lightbox__arrow lightbox__next" id="lightboxNext"
                 aria-label="다음 사진" type="button">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -385,7 +387,6 @@
       </section>
     </main>
 
-    <script src="js/calendar.js" defer></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

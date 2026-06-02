@@ -1,3 +1,5 @@
+import { showToast } from "./util.js";
+
 const SHARE_TITLE = '최낙훈 ❤ 김민영 결혼식 초대';
 const SHARE_DESCRIPTION = '2026년 08월 29일, 라도무스아트하객님홀에서 함께 해주세요.';
 
@@ -10,24 +12,6 @@ function initKakao() {
   if (!Kakao.isInitialized()) {
     Kakao.init('YOUR_JAVASCRIPT_KEY');
   }
-}
-
-function showToast(message) {
-  const existing = document.querySelector('.toast-message');
-  if (existing) {
-    existing.remove();
-  }
-
-  const toast = document.createElement('div');
-  toast.className = 'toast-message';
-  toast.textContent = message;
-  document.body.appendChild(toast);
-
-  requestAnimationFrame(() => toast.classList.add('is-visible'));
-  setTimeout(() => {
-    toast.classList.remove('is-visible');
-    setTimeout(() => toast.remove(), 300);
-  }, 1600);
 }
 
 function copyInviteLink() {

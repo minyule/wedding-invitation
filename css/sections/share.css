@@ -1,7 +1,7 @@
 /* 공유 섹션 전체 컨테이너 */
 .share {
   background: var(--color-bg);
-  padding: 0rem 0 10rem;
+  padding: 0rem 0 6rem;
 }
 
 .share__inner {
@@ -24,26 +24,23 @@
 /* 공통 버튼 스타일 */
 .btn-share {
   width: 100%;
-  padding: 16px 0;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333333;
-  background-color: #e8f1f9; /* 이미지의 은은한 파스텔 블루톤 배경 */
+  padding: 1.2rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
   border: none;
-  border-radius: 4px; /* 살짝 둥근 모서리 */
   cursor: pointer;
-  
-  /* 부드러운 그림자 효과 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
-  
-  /* 마우스 올렸을 때 자연스러운 변화를 위한 트랜지션 */
-  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  transition: background 0.2s;
+
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
 }
 
-/* 버튼에 마우스를 올리거나 터치했을 때의 효과 (인터랙션 추가) */
+
 .btn-share:hover {
-  background-color: #dae8f5; /* 살짝 더 진해지는 배경색 */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  background: #faf7f4;
 }
 
 .btn-share:active {

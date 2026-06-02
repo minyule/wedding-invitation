@@ -1,12 +1,12 @@
 :root {
-  --color-bg: #faf9f7;
+  --color-bg: #ffffff;
   --color-primary: #3d2c1e;
   --color-accent: #c8a882;
   --color-accent-light: #e8d5bc;
   --color-text: #3d2c1e;
   --color-text-muted: #8a7a6e;
   --color-divider: #e0d6cc;
-  --color-white: #ffffff;
+  --color-outer: #faf9f7;
   --color-highlight: #d4846a;
 
   --font-display: 'Cormorant Garamond', serif;

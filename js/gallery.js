@@ -54,23 +54,29 @@ function renderGrid() {
 function openLightbox(index) {
   const lb = document.getElementById('lightbox');
 
-  // 트랙에 원본 이미지 삽입 (최초 1회)
   if (!trackBuilt) {
     const track = document.getElementById('lightboxTrack');
+
     IMAGES.forEach((filename, i) => {
       const img = document.createElement('img');
-      img.alt     = `웨딩 사진 ${i + 1}`;
-      img.loading = 'lazy';
-      // 현재 열리는 이미지는 즉시 로드
+
       img.src = FULL_DIR + filename;
+      img.alt = `웨딩 사진 ${i + 1}`;
+      img.loading = 'lazy';
+
       track.appendChild(img);
     });
+
     trackBuilt = true;
   }
 
   lb.hidden = false;
+  lb.classList.add('is-open');
+
   document.body.classList.add('lightbox-open');
+
   goToSlide(index, false);
+
   document.getElementById('lightboxClose').focus();
 }
 
@@ -93,9 +99,16 @@ function goToSlide(index, animate) {
 
 // ── 6. 라이트박스 닫기 ──────────────────────────────
 function closeLightbox() {
-  document.getElementById('lightbox').hidden = true;
+  const lb = document.getElementById('lightbox');
+
+  lb.classList.remove('is-open');
+  lb.hidden = true;
+
   document.body.classList.remove('lightbox-open');
-  if (lastFocused) lastFocused.focus();
+
+  if (lastFocused) {
+    lastFocused.focus();
+  }
 }
 
 // ── 7. 이벤트 등록 ──────────────────────────────────
@@ -147,8 +160,26 @@ function initEvents() {
   }, { passive: true });
 }
 
+function buildLightboxTrack() {
+  if (trackBuilt) return;
+
+  const track = document.getElementById('lightboxTrack');
+
+  IMAGES.forEach((filename, i) => {
+    const img = document.createElement('img');
+
+    img.src = FULL_DIR + filename;
+    img.alt = `웨딩 사진 ${i + 1}`;
+
+    track.appendChild(img);
+  });
+
+  trackBuilt = true;
+}
+
 // ── 8. 초기화 ────────────────────────────────────────
 export function initGallery() {
   renderGrid();
+  buildLightboxTrack();
   initEvents();
 }

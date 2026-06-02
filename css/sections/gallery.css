@@ -1,6 +1,6 @@
 .gallery{
   background: var(--color-bg);
-  padding: 0rem 0 1.5rem;
+  padding: 0rem 1rem 1.5rem;
 }
 
 .gallery__header{
@@ -113,18 +113,43 @@
 
 @keyframes galleryFadeIn{
   from{
-  opacity:0;
-  transform:translateY(12px)
-}to{
-  opacity:1;
-  transform:translateY(0)
-}
+    opacity:0;
+    transform:translateY(12px)
+  }
+  to{
+    opacity:1;
+    transform:translateY(0)
+  }
 }
 
-@media(max-width:420px){
-
+/* @media(max-width:420px){
   .gallery__grid{
     grid-template-columns:repeat(2,1fr)
   }
+} */
+  
+.lightbox__track-wrap{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
 
-  }
+.lightbox__track{
+  display:flex;
+  width:100%;
+  height:100%;
+}
+
+.lightbox__track img{
+  flex:0 0 100%;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.lightbox__arrow:disabled{
+  display:none;
+}
