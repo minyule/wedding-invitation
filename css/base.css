@@ -143,3 +143,13 @@ body{
   font-weight: 700;
   font-style: normal;
 }
+
+.description {
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+  font-weight: 300;
+  color: var(--font-secondary-color);
+  line-height: 1.9;
+  word-break: keep-all;
+  text-align: center;
+}

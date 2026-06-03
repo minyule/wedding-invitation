@@ -1,18 +1,72 @@
-:root {
-  --color-outer: #faf9f7;
+:root[data-theme="1"] {
+  --color-outer: #f3f5f8;
   --color-bg: #ffffff;
-  --color-title: #7896b3;
-  /* --color-divider: #e0d6cc; */
-
-  --background-secondary-color: #ddeaf5;
+  --color-point-bg: #e9edf2;
+  --color-title: #2f4a6d;
+  --color-point: #8d9aad;
+  /* --color-divider: #d5dce5; */
 
   --font-display: 'Cormorant Garamond', serif;
   --font-serif: 'Noto Serif KR', serif, sans-serif;
   --font-title: 'Golden Plains Demo', serif;
 
-  --font-primary-color: #3a3028;
-  --font-secondary-color: #8c7b6e;
+  --font-primary-color: #273240;
+  --font-secondary-color: #6f7c8f;
 
   --space-gap: 1.25rem;
-  
+}
+
+:root[data-theme="2"]  {
+  /* f4f6f2 */
+  --color-outer: #faf9f7;
+  --color-bg: #ffffff;
+  --color-point-bg: #e8eee6;
+  --color-title: #5f7a65;
+  --color-point: #8da691;
+  /* --color-divider: #d6ddd3; */
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-serif: 'Noto Serif KR', serif, sans-serif;
+  --font-title: 'Golden Plains Demo', serif;
+
+  --font-primary-color: #2f3a31;
+  --font-secondary-color: #6f7f73;
+
+  --space-gap: 1.25rem;
+}
+
+:root[data-theme="3"] {
+  --color-outer: #faf7f2;
+  --color-bg: #fffdf9;
+  --color-point-bg: #f5eee4;
+  --color-title: #b8925a;
+  --color-point: #d8bf91;
+  /* --color-divider: #e8ddcf; */
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-serif: 'Noto Serif KR', serif, sans-serif;
+  --font-title: 'Golden Plains Demo', serif;
+
+  --font-primary-color: #4b3f32;
+  --font-secondary-color: #8d7a63;
+
+  --space-gap: 1.25rem;
+}
+
+:root[data-theme="4"] {
+  --color-outer: #faf7f5;
+  --color-bg: #fffdfc;
+  --color-point-bg: #f4e9e7;
+  --color-title: #9b6a6c;
+  --color-point: #c8a2a4;
+  /* --color-divider: #e5d7d4; */
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-serif: 'Noto Serif KR', serif, sans-serif;
+  --font-title: 'Golden Plains Demo', serif;
+
+  --font-primary-color: #4b3a39;
+  --font-secondary-color: #8b7372;
+
+  --space-gap: 1.25rem;
 }

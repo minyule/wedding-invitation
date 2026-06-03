@@ -1,7 +1,7 @@
 /* ── Greeting 섹션 전체 ── */
 .greeting {
   position: relative;
-  background-color: var(--background-secondary-color);
+  background-color: var(--color-point-bg);
   overflow: hidden;
 }
 

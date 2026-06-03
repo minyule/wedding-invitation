@@ -70,7 +70,7 @@
 
 /* 결혼식 날 강조 */
 .calendar__table td.cal-wedding span {
-  background: #2c3e6b;
+  background: var(--color-point);
   color: #ffffff !important;
   font-weight: 500;
 }

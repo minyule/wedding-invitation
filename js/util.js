@@ -10,14 +10,15 @@ export function showToast(message) {
 }
 
 export const VERSION = (() => {
-  const secret = 0.2;
-  const rest = (1 - secret) / 2;
+  // return '3';
+
   const r = Math.random();
 
   const version =
-    r < rest ? '1' :
-    r < rest * 2 ? '2' :
-    '3';
+    r < 0.45 ? '1' :
+    r < 0.90 ? '2' :
+    r < 0.99 ? '3' :
+    '4';
 
   console.log(`VERSION: ${version}`);
 
