@@ -11,6 +11,7 @@
 .cover__photo {
   position: relative;
   width: 100%;
+  overflow: hidden;
   /* 세로 고정값 없음 — 이미지 비율대로 높이가 결정됨 */
 }
 
@@ -24,20 +25,36 @@
 /* ── Our Beginning 타이틀 ── */
 .cover__title {
   position: absolute;
-  top: 9%;               /* px 대신 % — 이미지 높이 기준 상대값 */
+  top: 9%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   white-space: nowrap;
 
-  font-family: 'Cormorant Garamond', serif;
-  /* font-style: italic; */
+  font-family: var(--font-title);
   font-weight: 300;
-  font-size: clamp(2.2rem, 8vw, 3rem);
+  font-size: clamp(3.3rem, 10vw, 4.5rem);
   color: #ffffff;
   letter-spacing: 0.03em;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
 }
+
+.cover.in-view .cover__title {
+  animation: titleFadeIn 2.5s ease forwards;
+  /* animation-delay: 0.8s; */
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* ── 하단 정보 영역 ── */
 .cover__details {
@@ -60,18 +77,19 @@
 }
 
 .cover__role {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: 0.78rem;
   font-weight: 400;
-  color: #8c7b6e;
+  color: var(--font-secondary-color);
   letter-spacing: 0.05em;
+  padding-right: 0.6rem;
 }
 
 .cover__name {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 500;
-  color: #3a3028;
+  color: var(--font-primary-color);
   letter-spacing: 0.18em;
   margin-right: 0.6rem;
 }
@@ -80,24 +98,24 @@
   margin-right: 0;
 }
 
-.cover__line {
+/* .cover__line {
   width: 36px;
   height: 1px;
   background: #c9a96e;
-}
+} */
 
 .cover__datetime {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: 0.9rem;
   font-weight: 300;
-  color: #3a3028;
+  color: var(--font-primary-color);
   letter-spacing: 0.08em;
 }
 
 .cover__venue {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: 0.85rem;
   font-weight: 300;
-  color: #8c7b6e;
+  color: var(--font-secondary-color);
   letter-spacing: 0.04em;
 }

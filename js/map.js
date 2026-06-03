@@ -30,7 +30,7 @@ function initMap() {
       infoWindow.open(map, marker);
     });
   } else {
-    mapEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--color-text-muted);padding:1rem;text-align:center;">지도 로드 대기 중 — APP_KEY를 index.html에 추가하세요.</div>';
+    mapEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--font-secondary-color);padding:1rem;text-align:center;">지도 로드 대기 중 — APP_KEY를 index.html에 추가하세요.</div>';
     console.warn('Kakao Maps SDK not found. Add SDK script with your APP_KEY in index.html.');
   }
 }

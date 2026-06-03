@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .account__desc {
@@ -20,10 +20,10 @@
 }
 
 .account__desc p {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.85rem, 3.5vw, 0.95rem);
   font-weight: 300;
-  color: #5a4e44;
+  color: var(--font-secondary-color);
   line-height: 1.9;
   word-break: keep-all;
 }
@@ -61,17 +61,8 @@
   gap: 0.6rem;
 }
 
-/* 신랑측/신부측 텍스트 */
-.accordion__badge {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
-  font-weight: 500;
-  color: #3a3028;
-  letter-spacing: 0.04em;
-}
-
 /* 골드 왼쪽 라인 — 열렸을 때 표시 */
-.accordion__trigger[aria-expanded="true"] .accordion__badge::before {
+.accordion__trigger[aria-expanded="true"] .font-default::before {
   content: '';
   display: inline-block;
   width: 3px;
@@ -129,18 +120,18 @@
 }
 
 .account-item__relation {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.78rem, 3vw, 0.85rem);
   font-weight: 400;
-  color: #8c7b6e;
+  color: var(--font-secondary-color);
   letter-spacing: 0.03em;
 }
 
 .account-item__number {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.88rem, 3.5vw, 0.95rem);
   font-weight: 300;
-  color: #3a3028;
+  color: var(--font-primary-color);
   letter-spacing: 0.02em;
 }
 
@@ -150,10 +141,10 @@
   background: #f5f0ea;
   border: 1px solid #e8ddd5;
   border-radius: 20px;        /* pill 형태 */
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: 0.75rem;
   font-weight: 400;
-  color: #8c7b6e;
+  color: var(--font-secondary-color);
   cursor: pointer;
   transition: background 0.15s, color 0.15s, transform 0.1s;
   flex-shrink: 0;
@@ -177,7 +168,7 @@
   transform: translateX(-50%) translateY(1rem);
   background: rgba(44, 62, 107, 0.92);
   color: #ffffff;
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: 0.85rem;
   padding: 0.65rem 1.4rem;
   border-radius: 999px;

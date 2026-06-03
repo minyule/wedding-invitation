@@ -12,15 +12,6 @@
   gap: 1.25rem;
 }
 
-/* 버튼들을 감싸는 랩퍼 */
-.share-button-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 16px; /* 버튼과 버튼 사이의 간격 */
-  width: 100%;
-  max-width: 420px; /* 모바일 및 웹에서 적절한 최대 너비 제한 */
-}
-
 /* 공통 버튼 스타일 */
 .btn-share {
   width: 100%;

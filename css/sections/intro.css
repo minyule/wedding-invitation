@@ -1,7 +1,7 @@
 /* ── Greeting 섹션 전체 ── */
 .greeting {
   position: relative;
-  background-color: #ddeaf5; /* 연한 하늘색 */
+  background-color: var(--background-secondary-color);
   overflow: hidden;
 }
 
@@ -65,10 +65,10 @@
 }
 
 .greeting__text p {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.88rem, 3.5vw, 0.97rem);
   font-weight: 300;
-  color: #3a3028;
+  color: var(--font-primary-color);
   line-height: 1.95;
   letter-spacing: 0.02em;
   word-break: keep-all;
@@ -106,24 +106,24 @@
 }
 
 .greeting__parent-name {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.92rem, 3.8vw, 1rem);
   font-weight: 500;
-  color: #3a3028;
+  color: var(--font-primary-color);
   letter-spacing: 0.03em;
 }
 
 .greeting__parent-rel {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.78rem, 3vw, 0.85rem);
   font-weight: 300;
-  color: #8c7b6e;
+  color: var(--font-secondary-color);
 }
 
 .greeting__parent-child {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.92rem, 3.8vw, 1rem);
   font-weight: 600;
-  color: #3a3028;
+  color: var(--font-primary-color);
   letter-spacing: 0.03em;
 }

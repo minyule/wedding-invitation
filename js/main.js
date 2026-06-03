@@ -3,6 +3,7 @@ import { initMap, setupMapButtons } from './map.js';
 import { initGallery } from './gallery.js';
 import { initAccount } from './account.js';
 import { initShare } from './share.js';
+import { VERSION } from './util.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. 스크롤 애니메이션을 위한 IntersectionObserver 설정
@@ -42,4 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
   try { initGallery(); } catch (e) { console.error('갤러리 초기화 실패:', e); }
   try { initAccount(); } catch (e) { console.error('계좌 아코디언 초기화 실패:', e); }
   try { initShare(); } catch (e) { console.error('공유 기능 초기화 실패:', e); }
+
+  // document.querySelectorAll('.divider-image').forEach(img => {
+  //   img.src = `asset/image/divider-${VERSION}.png`;
+  // });
+
+  document.getElementById('main-image').src =
+    `asset/image/${VERSION}/main-image.jpg`;
+
+  document.getElementById('sub-image').src =
+    `asset/image/${VERSION}/sub-image.jpg`;
+
 });

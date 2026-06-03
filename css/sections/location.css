@@ -14,10 +14,10 @@
 
 /* 예식장명 */
 .location__venue-name {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(1rem, 4.2vw, 1.2rem);
   font-weight: 600;
-  color: #3a3028;
+  color: var(--font-primary-color);
   line-height: 1.65;
   text-align: center;
   word-break: keep-all;
@@ -25,10 +25,10 @@
 
 /* 주소 */
 .location__address {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.82rem, 3.3vw, 0.92rem);
   font-weight: 300;
-  color: #8c7b6e;
+  color: var(--font-secondary-color);
   line-height: 1.8;
   text-align: center;
   font-style: normal;
@@ -106,19 +106,20 @@
 
 /* 교통편 제목 (자가용 이용 시 등) */
 .transport__type {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.95rem, 3.8vw, 1.05rem);
   font-weight: 700;
-  color: #3a3028;
+  /* color: #3a3028; */
+  color: var(--font-primary-color);
   letter-spacing: 0.02em;
 }
 
 /* 교통편 본문 */
 .transport__desc {
-  font-family: 'Noto Serif KR', serif;
+  font-family: var(--font-serif);
   font-size: clamp(0.82rem, 3.3vw, 0.92rem);
   font-weight: 300;
-  color: #5a4e44;
+  color: var(--font-secondary-color);
   line-height: 1.9;
   letter-spacing: 0.01em;
   word-break: keep-all;

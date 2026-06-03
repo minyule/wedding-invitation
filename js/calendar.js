@@ -4,8 +4,10 @@ export function renderCalendar(containerId, YEAR, MONTH, DAY) {
   document.getElementById('calMonthLabel').textContent =
     `${YEAR}년 ${String(MONTH).padStart(2, '0')}월`;
 
+  const startMonday = false;
+
   // 요일 헤더 (월요일 시작)
-  const DAYS = ['월', '화', '수', '목', '금', '토', '일'];
+  const DAYS = startMonday ? ['월', '화', '수', '목', '금', '토', '일'] : ['일', '월', '화', '수', '목', '금', '토'];
   const head = document.getElementById('calHead');
   
   // 기존에 쌓인 게 있다면 비워주기 (안전장치)
@@ -14,14 +16,21 @@ export function renderCalendar(containerId, YEAR, MONTH, DAY) {
   DAYS.forEach((d, i) => {
     const th = document.createElement('th');
     th.textContent = d;
-    if (i === 5) th.className = 'col-sat';
-    if (i === 6) th.className = 'col-sun';
+    if (startMonday) {
+      if (i === 5) th.className = 'col-sat';
+      if (i === 6) th.className = 'col-sun';
+    } else {
+      if (i === 0) th.className = 'col-sun';
+      if (i === 6) th.className = 'col-sat';
+    }
     head.appendChild(th);
   });
 
   // 1일 요일 계산 (월요일 = 0 기준으로 변환)
   const firstDow  = new Date(YEAR, MONTH - 1, 1).getDay(); // 0=일
-  const startOffset = (firstDow === 0) ? 6 : firstDow - 1; // 월=0 기준
+  const startOffset = startMonday
+    ? (firstDow === 0 ? 6 : firstDow - 1)
+    : firstDow;
   const lastDate  = new Date(YEAR, MONTH, 0).getDate();
 
   const body = document.getElementById('calBody');
@@ -40,8 +49,13 @@ export function renderCalendar(containerId, YEAR, MONTH, DAY) {
   for (let d = 1; d <= lastDate; d++) {
     const colIndex = cellCount % 7; // 0=월 ... 5=토 6=일
     const td = document.createElement('td');
-    if (colIndex === 5) td.className = 'col-sat';
-    if (colIndex === 6) td.className = 'col-sun';
+    if (startMonday) {
+      if (colIndex === 5) td.className = 'col-sat';
+      if (colIndex === 6) td.className = 'col-sun';
+    } else {
+      if (colIndex === 0) td.className = 'col-sun';
+      if (colIndex === 6) td.className = 'col-sat';
+    }
     if (d === DAY)      td.classList.add('cal-wedding');
 
     const span = document.createElement('span');

@@ -3,7 +3,7 @@
 body{
   font-family: var(--font-sans);
   background: var(--color-outer);
-  color: var(--color-text);
+  color: var(--font-primary-color);
   -webkit-font-smoothing:antialiased;
 }
 
@@ -46,20 +46,20 @@ body{
   transform:none
 }
 
-.cover__inner{
+/* .cover__inner{
   height:22rem;
   display:flex;
   align-items:center;
   justify-content:center;
   background:linear-gradient(180deg,var(--color-accent-light),var(--color-accent))
-}
+} */
 /* .cover__title{
   font-family:var(--font-display);
   font-size:2rem;
   color:var(--color-outer)
 } */
 
-.gallery-grid{
+/* .gallery-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:0.5rem
@@ -67,14 +67,14 @@ body{
 .thumb{
   background:var(--color-divider);
   padding-top:100%
-}
+} */
 
-.btn{
+/* .btn{
   display:inline-block;
   padding:.6rem 1rem;
   background:var(--color-primary);
   color:var(--color-outer);border-radius:6px
-}
+} */
 
 
 /* simple fadeInUp utility (used by JS) */
@@ -100,14 +100,15 @@ body{
 }
 
 .title{
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
+  font-family: var(--font-title);
+  /* font-style: italic; */
   font-weight: 400;
-  font-size: clamp(1.2rem, 5vw, 1.4rem);
-  color: #2c3e6b;
-  letter-spacing: 0.2em;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  /* font-size: clamp(1.2rem, 5vw, 1.4rem); */
+  color: var(--color-title);
+  /* letter-spacing: 0.2em; */
   text-align: center;
-  padding: 0 0 1.5rem;
+  padding: 0 0 1rem;
 }
 
 .divider{
@@ -125,4 +126,20 @@ body{
 .content {
   background: var(--color-bg);
   padding: 0rem 0 1.5rem;
+}
+
+.font-default {
+  font-family: var(--font-serif);
+  font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+  font-weight: 300;
+  color: var(--font-secondary-color);
+  line-height: 1.9;
+  word-break: keep-all;
+}
+
+@font-face {
+  font-family: 'Golden Plains Demo';
+  src: url('/asset/font/Golden Plains Demo.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }

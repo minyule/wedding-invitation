@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
   <head>
-    <link rel="icon" href="/asset/image/fabicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/asset/image/common/fabicon.svg" type="image/svg+xml" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>The Wedding Day : 낙훈 & 민영</title>
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sections/cover.css">
     <link rel="stylesheet" href="css/sections/intro.css">
-    <link rel="stylesheet" href="css/sections/invitation.css">
     <link rel="stylesheet" href="css/sections/calendar.css">
     <link rel="stylesheet" href="css/sections/gallery.css">
     <link rel="stylesheet" href="css/sections/location.css">
@@ -30,7 +29,7 @@
         <!-- 사진 영역 -->
         <div class="cover__photo">
           <img
-            src="asset/image/main-image.jpg"
+            id="main-image"
             alt="신랑 최낙훈, 신부 김민영 웨딩 사진"
             class="cover__bg"
             loading="eager"
@@ -47,7 +46,7 @@
             <span class="cover__role">신부</span>
             <span class="cover__name">김 민 영</span>
           </p>
-          <div class="cover__line"></div>
+          <!-- <div class="cover__line"></div> -->
           <p class="cover__datetime">2026. 08. 29. SAT 13 : 00</p>
           <p class="cover__venue">라도무스아트센터 3F 아트리움홀</p>
         </div>
@@ -66,7 +65,7 @@
 
           <!-- 상단 divider -->
           <div class="divider">
-            <img src="asset/image/divider.png" alt="" aria-hidden="true" />
+            <img src="asset/image/common/divider.png" alt="" aria-hidden="true" />
           </div>
 
           <!-- 타이틀 -->
@@ -84,7 +83,11 @@
 
         <!-- 반지 사진 (풀 width — inner 밖) -->
         <div class="greeting__photo">
-          <img src="asset/image/sub-image.jpg" alt="커플 반지 사진" loading="lazy" />
+          <img 
+            id="sub-image"
+            alt="커플 반지 사진"
+            loading="lazy"
+          />
         </div>
 
         <div class="greeting__inner">
@@ -105,7 +108,7 @@
 
           <!-- 하단 divider -->
           <div class="divider">
-            <img src="asset/image/divider.png" alt="" aria-hidden="true" />
+            <img src="asset/image/common/divider.png" alt="" aria-hidden="true" />
           </div>
 
         </div>
@@ -132,7 +135,7 @@
       </section>
 
       <div class="divider">
-        <img src="asset/image/divider.png" alt="" aria-hidden="true" />
+        <img src="asset/image/common/divider.png" alt="" aria-hidden="true" />
       </div>
 
       <section id="location" class="section location" aria-label="Location">
@@ -155,7 +158,7 @@
 
           <!-- 약도 이미지 -->
           <div class="location__map-img">
-            <img src="asset/image/map.jpg" alt="라도무스아트센터 약도" loading="lazy" />
+            <img src="asset/image/common/map.jpg" alt="라도무스아트센터 약도" loading="lazy" />
           </div>
 
           <!-- 길찾기 버튼 3개 -->
@@ -166,7 +169,7 @@
               href="https://tmap.life/d2eea2f4"
               target="_blank" rel="noopener"
               aria-label="T맵으로 길찾기">
-              <img src="asset/image/icon-tmap.png" alt="T MAP" class="nav-btn__icon" />
+              <img src="asset/image/common/icon-tmap.png" alt="T MAP" class="nav-btn__icon" />
             </a>
 
             <!-- 카카오맵 -->
@@ -174,7 +177,7 @@
               href="https://kko.to/ZuJQ8r42vA"
               target="_blank" rel="noopener"
               aria-label="카카오맵으로 길찾기">
-              <img src="asset/image/icon-kakao.png" alt="카카오맵" class="nav-btn__icon" />
+              <img src="asset/image/common/icon-kakao.png" alt="카카오맵" class="nav-btn__icon" />
             </a>
 
             <!-- 네이버지도 -->
@@ -182,7 +185,7 @@
               href="https://map.naver.com/v5/search/라도무스아트센터웨딩홀"
               target="_blank" rel="noopener"
               aria-label="네이버지도로 길찾기">
-              <img src="asset/image/icon-naver.png" alt="네이버지도" class="nav-btn__icon" />
+              <img src="asset/image/common/icon-naver.png" alt="네이버지도" class="nav-btn__icon" />
             </a>
 
           </div>
@@ -253,14 +256,12 @@
 
       <!-- 하단 divider -->
       <div class="divider">
-        <img src="asset/image/divider.png" alt="" aria-hidden="true" />
+        <img src="asset/image/common/divider.png" alt="" aria-hidden="true" />
       </div>
 
       <section class="section gallery" aria-label="Gallery">
 
-        <div class="gallery__header">
-          <h2 class="title">Gallery</h2>
-        </div>
+        <h2 class="title">Gallery</h2>
 
         <!-- JS가 동적으로 채움 -->
         <div class="gallery__grid" id="galleryGrid" role="list"></div>
@@ -268,7 +269,7 @@
       </section>
 
       <div class="divider">
-        <img src="asset/image/divider.png" alt="" aria-hidden="true" />
+        <img src="asset/image/common/divider.png" alt="" aria-hidden="true" />
       </div>
 
       <!-- 라이트박스: body 직접 자식 (position:fixed가 overflow에 갇히지 않도록) -->
@@ -326,7 +327,7 @@
             <button class="accordion__trigger" aria-expanded="false"
                     aria-controls="panelGroom" id="triggerGroom" type="button">
               <span class="accordion__label">
-                <span class="accordion__badge">신랑측</span>
+                <span class="font-default">신랑측</span>
               </span>
               <span class="accordion__icon" aria-hidden="true"></span>
             </button>
@@ -343,7 +344,7 @@
             <button class="accordion__trigger" aria-expanded="false"
                     aria-controls="panelBride" id="triggerBride" type="button">
               <span class="accordion__label">
-                <span class="accordion__badge">신부측</span>
+                <span class="font-default">신부측</span>
               </span>
               <span class="accordion__icon" aria-hidden="true"></span>
             </button>
@@ -360,7 +361,7 @@
       </section>
 
       <div class="divider">
-        <img src="asset/image/divider.png" alt="" aria-hidden="true" />
+        <img src="asset/image/common/divider.png" alt="" aria-hidden="true" />
       </div>
 
       <!-- 토스트 -->
@@ -375,14 +376,12 @@
         <div class="share__inner">
           <h2 class="title">Share</h2>
           
-          <div class="share-button-wrap">
-            <button type="button" class="btn-share" id="btnCopyLink">
-              링크 복사하기
-            </button>
-            <button type="button" class="btn-share" id="btnKakaoShare">
-              카카오톡으로 공유하기
-            </button>
-          </div>
+          <button type="button" class="btn-share font-default" id="btnCopyLink">
+            링크 복사하기
+          </button>
+          <button type="button" class="btn-share font-default" id="btnKakaoShare">
+            카카오톡으로 공유하기
+          </button>
         </div>
       </section>
     </main>

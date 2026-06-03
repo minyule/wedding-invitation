@@ -2,6 +2,8 @@
 // ── 1. 이미지 목록 설정 ──────────────────────────────
 // asset/image/gallery/ 폴더 내 파일명 abc 순 배열
 // 파일을 추가/삭제할 때 이 배열만 수정하면 됩니다.
+import { VERSION } from "./util.js";
+
 const IMAGES = [
   'photo-01.jpg',
   'photo-02.jpg',
@@ -15,10 +17,16 @@ const IMAGES = [
   'photo-10.jpg',
   'photo-11.jpg',
   'photo-12.jpg',
+  'photo-13.jpg',
+  'photo-14.jpg',
+  'photo-15.jpg',
+  'photo-16.jpg',
+  'photo-17.jpg',
+  'photo-18.jpg',
 ].sort(); // abc 순 보장
 
-const THUMB_DIR = 'asset/image/gallery/thumb/';  // 썸네일 경로
-const FULL_DIR  = 'asset/image/gallery/';         // 원본 경로
+const THUMB_DIR = 'asset/image/'+VERSION+'/gallery/thumb/';  // 썸네일 경로
+const FULL_DIR  = 'asset/image/'+VERSION+'/gallery/';         // 원본 경로
 
 // ── 2. 상태 ─────────────────────────────────────────
 let currentIndex  = 0;
