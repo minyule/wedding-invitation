@@ -4,9 +4,9 @@ import { showToast } from "./util.js";
 
 const ACCOUNTS = {
   groom: [
-    { relation: '신랑',      bank: '국민은행', account: '100-0000-1111', holder: '최낙훈' },
-    { relation: '신랑 아버지', bank: '국민은행', account: '100-0000-1111', holder: '최명근' },
-    { relation: '신랑 어머니', bank: '국민은행', account: '100-0000-1111', holder: '유정진' },
+    { relation: '신랑',      bank: '국민은행', account: '945802-00-002017', holder: '최낙훈' },
+    { relation: '신랑 아버지', bank: '국민은행', account: '401-24-0381-933', holder: '최명근' },
+    { relation: '신랑 어머니', bank: '국민은행', account: '406-21-0048-192', holder: '유정진' },
   ],
   bride: [
     { relation: '신부',      bank: '국민은행', account: '100-0000-1111', holder: '김민영' },
