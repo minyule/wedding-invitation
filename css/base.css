@@ -139,7 +139,7 @@ body{
 
 @font-face {
   font-family: 'Golden Plains Demo';
-  src: url('/asset/font/Golden Plains Demo.ttf') format('truetype');
+  src: url('../asset/font/Golden Plains Demo.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
