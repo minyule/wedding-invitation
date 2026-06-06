@@ -10,7 +10,7 @@ export function showToast(message) {
 }
 
 export const VERSION = (() => {
-  // return '3';
+  // return '4';
 
   const r = Math.random();
 

@@ -63,14 +63,14 @@ function sendKakaoShare() {
 
 function bindShareEvents() {
   const copyButton = document.getElementById('btnCopyLink');
-  const kakaoButton = document.getElementById('btnKakaoShare');
+  // const kakaoButton = document.getElementById('btnKakaoShare');
 
   if (copyButton) {
     copyButton.addEventListener('click', copyInviteLink);
   }
-  if (kakaoButton) {
-    kakaoButton.addEventListener('click', sendKakaoShare);
-  }
+  // if (kakaoButton) {
+  //   kakaoButton.addEventListener('click', sendKakaoShare);
+  // }
 }
 
 function initShare() {

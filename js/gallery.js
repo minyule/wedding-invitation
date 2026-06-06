@@ -159,11 +159,15 @@ function initEvents() {
   wrap.addEventListener('touchend', (e) => {
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
-    // 수평 스와이프만 처리 (수직 스크롤과 구분)
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 48) {
-      dx < 0
-        ? goToSlide(currentIndex + 1, true)
-        : goToSlide(currentIndex - 1, true);
+    
+    // [수정 1] 감도 완화: 수평으로 30px만 움직여도 작동 (대충 스와이프해도 인정)
+    // [수정 2] 세로로 너무 과하게 쓸어내린 게 아니라면 수평 슬라이드로 인정
+    if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy) * 0.6) {
+      if (dx < 0) {
+        goToSlide(currentIndex + 1, true);
+      } else {
+        goToSlide(currentIndex - 1, true);
+      }
     }
   }, { passive: true });
 }
