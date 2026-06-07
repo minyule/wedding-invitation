@@ -5,6 +5,18 @@ body{
   background: var(--color-outer);
   color: var(--font-primary-color);
   -webkit-font-smoothing:antialiased;
+
+  /* 텍스트 선택 방지 */
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* 마우스 드래그 방지 */
+  -webkit-user-drag: none;
+
+  /* 이미지 길게 누를 때 뜨는 메뉴 차단 */
+  -webkit-touch-callout: none; 
 }
 
 /* body {

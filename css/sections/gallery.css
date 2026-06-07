@@ -154,3 +154,37 @@ body.lightbox-open {
   display:none;
 }
 
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 방패 역할의 오버레이 */
+.lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* 이미지보다 위에 위치 */
+  background: transparent; /* 투명하게 */
+  /* 모바일 길게 누르기 방지 */
+  -webkit-touch-callout: none;
+}
+/* 슬라이드 아이템 컨테이너 설정 */
+.lightbox__track .image-wrapper {
+  flex: 0 0 100%; /* 각 사진이 슬라이드 한 칸을 꽉 채움 */
+  width: 100%;
+  height: 100%;
+  position: relative; /* 자식 요소(img, overlay) 배치를 위해 필수 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 실제 이미지 크기 제어 */
+.lightbox__track .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 이미지가 찌그러지지 않고 비율 유지 */
+}

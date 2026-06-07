@@ -42,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   } catch (e) { console.error('달력 초기화 실패:', e); }
 
+  document.addEventListener('contextmenu', (e) => e.preventDefault()); // 우클릭 방지
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && (e.key === 's' || e.key === 'c' || e.key === 'u')) {
+      e.preventDefault();
+    }
+  });
+
   try { initIntro(); } catch (e) { console.error('인트로 초기화 실패:', e); }
   try { initMap();} catch (e) { console.error('지도 초기화 실패:', e); }
   try { initGallery(); } catch (e) { console.error('갤러리 초기화 실패:', e); }

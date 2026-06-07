@@ -56,29 +56,14 @@ function renderGrid() {
 function openLightbox(index) {
   const lb = document.getElementById('lightbox');
 
-  if (!trackBuilt) {
-    const track = document.getElementById('lightboxTrack');
-
-    IMAGES.forEach((filename, i) => {
-      const img = document.createElement('img');
-
-      img.src = FULL_DIR + filename;
-      img.alt = `웨딩 사진 ${i + 1}`;
-      img.loading = 'lazy';
-
-      track.appendChild(img);
-    });
-
-    trackBuilt = true;
-  }
+  // 중복 로직 제거: 이미 만들어둔 함수를 호출하기만 하면 됩니다.
+  buildLightboxTrack();
 
   lb.hidden = false;
   lb.classList.add('is-open');
-
   document.body.classList.add('lightbox-open');
 
   goToSlide(index, false);
-
   document.getElementById('lightboxClose').focus();
 }
 
@@ -172,12 +157,24 @@ function buildLightboxTrack() {
   const track = document.getElementById('lightboxTrack');
 
   IMAGES.forEach((filename, i) => {
-    const img = document.createElement('img');
+    // 1. 컨테이너 생성
+    const wrapper = document.createElement('div');
+    wrapper.className = 'image-wrapper'; // CSS에서 지정한 클래스
 
+    // 2. 이미지 생성
+    const img = document.createElement('img');
     img.src = FULL_DIR + filename;
     img.alt = `웨딩 사진 ${i + 1}`;
+    img.draggable = false; // PC 드래그 방지
 
-    track.appendChild(img);
+    // 3. 투명 오버레이 생성
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox__overlay'; // CSS에서 지정한 클래스
+
+    // 조립
+    wrapper.appendChild(img);
+    wrapper.appendChild(overlay);
+    track.appendChild(wrapper);
   });
 
   trackBuilt = true;
