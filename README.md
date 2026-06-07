@@ -53,10 +53,10 @@
 ## 5. html 썸네일
 - 카카오톡이나 팀즈나 블로그 등에서 링크 첨부할 때 뜨는 썸네일 이미지와 설명에 대한 설명
 - index.html 의 <head> 내부 데이터 변경
-  - <title>브라우저 탭 타이틀</title>
-  - <meta property="og:title" content="사이트 제목">
-  - <meta property="og:description" content="사이트 설명" />
-  - <meta property="og:image" content="썸네일 파일 경로" />: 동작 안하는거 같음..
+  - `<title>브라우저 탭 타이틀</title>`
+  - `<meta property="og:title" content="사이트 제목">`
+  - `<meta property="og:description" content="사이트 설명" />`
+  - `<meta property="og:image" content="썸네일 파일 경로" />: 동작 안하는거 같음..`
 
 ## 6. 설치할 것들
 - vscode (https://ardentdays.tistory.com/57 참고)
