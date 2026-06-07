@@ -1,9 +1,12 @@
 import { renderCalendar } from './calendar.js'; // 💡 달력 함수가 다른 파일에 있다면 import 추가!
-import { initMap, setupMapButtons } from './map.js';
+import { initMap } from './map.js';
 import { initGallery } from './gallery.js';
 import { initAccount } from './account.js';
 import { initShare } from './share.js';
-import { VERSION } from './util.js';
+import { initIntro } from './intro.js';
+import { getConfig } from './config.js';
+
+const CONFIG = getConfig();
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. 스크롤 애니메이션을 위한 IntersectionObserver 설정
@@ -39,32 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   } catch (e) { console.error('달력 초기화 실패:', e); }
 
-  try { initMap(); setupMapButtons(); } catch (e) { console.error('지도 초기화 실패:', e); }
+  try { initIntro(); } catch (e) { console.error('인트로 초기화 실패:', e); }
+  try { initMap();} catch (e) { console.error('지도 초기화 실패:', e); }
   try { initGallery(); } catch (e) { console.error('갤러리 초기화 실패:', e); }
   try { initAccount(); } catch (e) { console.error('계좌 아코디언 초기화 실패:', e); }
   try { initShare(); } catch (e) { console.error('공유 기능 초기화 실패:', e); }
 
-  if (VERSION === '1') {
-    document.querySelector('.cover__title').textContent = 'Our Beginning';
-  } else if (VERSION === '2') {
-    document.querySelector('.cover__title').textContent = 'Save the Date';
-  } else if (VERSION === '3') {
-    document.querySelector('.cover__title').innerHTML = 'Two Hearts<br>One Journey';
-    document.querySelector('.cover__title').style.top = '70%';
-  } else {
-    document.querySelector('.cover__title').innerHTML = 'A New<br>Chapter Begins';
-    document.querySelector('.cover__title').style.top = '70%';
-  }
-
-  // document.querySelectorAll('.divider-image').forEach(img => {
-  //   img.src = `asset/image/divider-${VERSION}.png`;
-  // });
-
-  document.getElementById('main-image').src =
-    `asset/image/${VERSION}/main-image.jpg`;
-
-  document.getElementById('sub-image').src =
-    `asset/image/${VERSION}/sub-image.jpg`;
-
-  document.documentElement.dataset.theme = VERSION;
 });

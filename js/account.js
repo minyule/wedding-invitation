@@ -1,21 +1,19 @@
 // account.js
 
 import { showToast } from "./util.js";
+import { getConfig } from "./config.js";
 
-const ACCOUNTS = {
-  groom: [
-    { relation: '신랑',      bank: '국민', account: '945802-00-002017', holder: '최낙훈' },
-    { relation: '신랑 아버지', bank: '국민', account: '401-24-0381-933', holder: '최명근' },
-    { relation: '신랑 어머니', bank: '국민', account: '406-21-0048-192', holder: '유정진' },
-  ],
-  bride: [
-    { relation: '신부',      bank: '농협', account: '302-2895-4062-21', holder: '김민영' },
-    { relation: '신부 아버지', bank: '국민', account: '542-3020-4096-154', holder: '김동권' },
-    { relation: '신부 어머니', bank: '농협', account: '356-1338-7153-13', holder: '고영희' },
-  ],
-};
+const CONFIG = getConfig();
 
 function renderPanel(panelId, list) {
+  // 1. 설명 텍스트 세팅
+  const descEl = document.querySelector('.account__desc');
+  if (descEl && CONFIG.account.desc) {
+    descEl.innerHTML = CONFIG.account.desc
+      .map(text => `<p>${text}</p>`)
+      .join('');
+  }
+
   const inner = document.querySelector(`#${panelId} .accordion__panel-inner`);
   if (!inner) return;
   
@@ -91,7 +89,7 @@ async function copyText(text) {
 
 // 최종 실행 함수
 export function initAccount() {
-  renderPanel('panelGroom', ACCOUNTS.groom);
-  renderPanel('panelBride', ACCOUNTS.bride);
+  renderPanel('panelGroom', CONFIG.account.groom);
+  renderPanel('panelBride', CONFIG.account.bride);
   initAccordion();
 }

@@ -153,3 +153,20 @@ body{
   word-break: keep-all;
   text-align: center;
 }
+
+.footer-credit {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.75rem; /* 아주 작게 */
+  color: #999;       /* 눈에 띄지 않는 회색 */
+}
+
+.footer-credit a {
+  color: #777;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.footer-credit a:hover {
+  color: #333; /* 마우스 올렸을 때 살짝 진하게 */
+}

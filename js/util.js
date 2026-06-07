@@ -8,19 +8,3 @@ export function showToast(message) {
   clearTimeout(window._toastTimer);
   window._toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2000);
 }
-
-export const VERSION = (() => {
-  // return '4';
-
-  const r = Math.random();
-
-  const version =
-    r < 0.45 ? '1' :
-    r < 0.90 ? '2' :
-    r < 0.99 ? '3' :
-    '4';
-
-  console.log(`VERSION: ${version}`);
-
-  return version;
-})();

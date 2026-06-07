@@ -34,25 +34,19 @@
         <div class="cover__photo">
           <img
             id="main-image"
-            alt="신랑 최낙훈, 신부 김민영 웨딩 사진"
+            alt="메인 이미지"
             class="cover__bg"
             loading="eager"
             fetchpriority="high"
           />
-          <h1 class="cover__title">Our Beginning</h1>
+          <h1 class="cover__title" id="cover__title">Our Beginning</h1>
         </div>
 
         <!-- 하단 정보 영역 -->
         <div class="cover__details">
-          <p class="cover__names">
-            <span class="cover__role">신랑</span>
-            <span class="cover__name">최 낙 훈</span>
-            <span class="cover__role">신부</span>
-            <span class="cover__name">김 민 영</span>
-          </p>
-          <!-- <div class="cover__line"></div> -->
-          <p class="cover__datetime">2026. 08. 29. SAT 13 : 00</p>
-          <p class="cover__venue">라도무스아트센터 3F 아트리움홀</p>
+          <p class="cover__names"></p>
+          <p class="cover__datetime"></p>
+          <p class="cover__venue"></p>
         </div>
 
       </section>
@@ -76,12 +70,7 @@
           <h2 class="title">Invitation</h2>
 
           <!-- 인사말 -->
-          <div class="greeting__text">
-            <p>여름의 끝자락에 만난 두 사람은<br>봄이 오면 함께 벚꽃을 보러 가자고<br>약속했습니다.</p>
-            <p>그 약속처럼 서로의 계절이 되어<br>가장 아름다운 시간을 함께했습니다.</p>
-            <p>이제 평생을 함께 걸어가고자 합니다.</p>
-            <p>귀한 걸음으로<br>축복해주시면 감사하겠습니다.</p>
-          </div>
+          <div class="greeting__text"></div>
 
         </div>
 
@@ -89,7 +78,7 @@
         <div class="greeting__photo">
           <img 
             id="sub-image"
-            alt="커플 반지 사진"
+            alt="서브 이미지"
             loading="lazy"
           />
         </div>
@@ -97,18 +86,7 @@
         <div class="greeting__inner">
 
           <!-- 혼주 정보 -->
-          <div class="greeting__parents">
-            <p class="greeting__parent-row">
-              <span class="greeting__parent-name">최명근 · 유정진</span>
-              <span class="greeting__parent-rel">의 장남</span>
-              <span class="greeting__parent-child">최낙훈</span>
-            </p>
-            <p class="greeting__parent-row">
-              <span class="greeting__parent-name">김동권 · 고영희</span>
-              <span class="greeting__parent-rel">의 장녀</span>
-              <span class="greeting__parent-child">김민영</span>
-            </p>
-          </div>
+          <div class="greeting__parents"></div>
 
           <!-- 하단 divider -->
           <div class="divider">
@@ -128,7 +106,7 @@
           <h2 class="title">Wedding Day</h2>
           <p class="calendar__month" id="calMonthLabel"></p>
 
-          <table class="calendar__table" role="grid" aria-label="2026년 8월 달력">
+          <table class="calendar__table" role="grid" aria-label="달력">
             <thead>
               <tr id="calHead"></tr>
             </thead>
@@ -150,19 +128,14 @@
           <h2 class="title">Location</h2>
 
           <!-- 예식장명 -->
-          <p class="location__venue-name">
-            라도무스아트센터웨딩홀<br>3F 아트리움홀
-          </p>
+          <p class="location__venue-name"></p>
 
           <!-- 주소 -->
-          <address class="location__address">
-            대전 유성구 동서대로 639<br>
-            대전 유성구 원신흥동 578-6
-          </address>
+          <address class="location__address"></address>
 
           <!-- 약도 이미지 -->
           <div class="location__map-img">
-            <img src="asset/image/common/map.jpg" alt="라도무스아트센터 약도" loading="lazy" />
+            <img src="asset/image/common/map.jpg" alt="약도 이미지" loading="lazy" />
           </div>
 
           <!-- 길찾기 버튼 3개 -->
@@ -170,6 +143,7 @@
 
             <!-- T MAP -->
             <a class="nav-btn"
+              id="btnTmap"
               href="https://tmap.life/d2eea2f4"
               target="_blank" rel="noopener"
               aria-label="T맵으로 길찾기">
@@ -178,6 +152,7 @@
 
             <!-- 카카오맵 -->
             <a class="nav-btn"
+              id="btnKakaoMap"
               href="https://kko.to/ZuJQ8r42vA"
               target="_blank" rel="noopener"
               aria-label="카카오맵으로 길찾기">
@@ -186,6 +161,7 @@
 
             <!-- 네이버지도 -->
             <a class="nav-btn"
+              id="btnNaverMap"
               href="https://map.naver.com/v5/search/라도무스아트센터웨딩홀"
               target="_blank" rel="noopener"
               aria-label="네이버지도로 길찾기">
@@ -194,68 +170,9 @@
 
           </div>
 
-          <!-- <button class="nav-btn" id="btnTmap" type="button" aria-label="T맵으로 길찾기">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-              <rect width="44" height="44" rx="10" fill="#1A6CFE"/>
-              <text x="22" y="29" text-anchor="middle"
-                font-size="18" font-weight="700" fill="#fff" font-family="sans-serif">T</text>
-            </svg>
-          </button>
-
-          <a class="nav-btn"
-            href="https://map.kakao.com/link/to/라도무스아트센터,36.3624,127.3390"
-            target="_blank" rel="noopener" aria-label="카카오맵으로 길찾기">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-              <rect width="44" height="44" rx="10" fill="#FEE500"/>
-              <path d="M22 10C15.4 10 10 14.6 10 20.2c0 3.6 2.1 6.7 5.3 8.6l-1.5 5.6 6.3-4.1c.6.1 1.2.1 1.9.1 6.6 0 12-4.6 12-10.2S28.6 10 22 10z"
-                fill="#3C1E1E"/>
-            </svg>
-          </a>
-
-          <a class="nav-btn"
-            href="https://map.naver.com/v5/search/라도무스아트센터웨딩홀"
-            target="_blank" rel="noopener" aria-label="네이버지도로 길찾기">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-              <rect width="44" height="44" rx="10" fill="#03C75A"/>
-              <path d="M14 13h5l6 9.5V13h5v18h-5l-6-9.5V31h-5V13z" fill="#fff"/>
-            </svg>
-          </a> -->
-
           <!-- 교통편 안내 -->
-          <div class="location__transport">
-
-            <div class="transport__item">
-              <h3 class="transport__type">자가용 이용 시</h3>
-              <p class="transport__desc">
-                내비게이션 : '라도무스 아트센터' 검색<br>
-                주차타워 진출입로가 혼잡하오니,<br>
-                조금 여유 있게 도착해 주시기 바랍니다.
-              </p>
-            </div>
-
-            <div class="transport__item">
-              <h3 class="transport__type">대중교통 이용 시</h3>
-              <p class="transport__desc">
-                지하철 : 유성온천역 6번 출구<br>
-                버스 : 106, 706번 이용<br>
-                106번 흥도초 하차 / 706번<br>
-                등기소·아이파크시티 하차 후<br>
-                목원대사거리 방향 도보 약 500m
-              </p>
-            </div>
-
-            <div class="transport__item">
-              <h3 class="transport__type">도보 이용 시</h3>
-              <p class="transport__desc">
-                버스 하차 후 목원대사거리 방향 이동<br>
-                도로 따라 직진 약 500m 이동하시면 됩니다
-              </p>
-            </div>
-
-          </div>
-
+          <div class="location__transport"></div>
         </div>
-
       </section>
 
       <!-- 하단 divider -->
@@ -270,7 +187,7 @@
         <!-- JS가 동적으로 채움 -->
         <div class="gallery__grid" id="galleryGrid" role="list"></div>
         
-        <div  class="description">화면을 새로고침해서 다른 버전의 청첩장을 확인해보세요.</div>
+        <div id="galleryDescription" class="description"></div>
       </section>
 
       <div class="divider">
@@ -322,10 +239,7 @@
 
           <h2 class="title">Account</h2>
 
-          <div class="account__desc">
-            <p>소중한 축복의 마음<br>진심으로 감사드립니다.</p>
-            <p>부득이한 사정으로<br>참석하지 못하는 분들을 위해<br>계좌번호를 안내드립니다.</p>
-          </div>
+          <div class="account__desc"></div>
 
           <!-- 신랑측 -->
           <div class="accordion">
@@ -390,6 +304,15 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer-credit">
+      <p>
+        © 2026. Designed & Developed by Minyule. 
+        <a href="https://github.com/minyule/wedding-invitation" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </p>
+    </footer>
 
     <script type="module" src="js/main.js"></script>
   </body>

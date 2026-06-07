@@ -2,28 +2,15 @@
 // ── 1. 이미지 목록 설정 ──────────────────────────────
 // asset/image/gallery/ 폴더 내 파일명 abc 순 배열
 // 파일을 추가/삭제할 때 이 배열만 수정하면 됩니다.
-import { VERSION } from "./util.js";
+import { getConfig, VERSION } from "./config.js";
 
-const IMAGES = [
-  'photo-01.jpg',
-  'photo-02.jpg',
-  'photo-03.jpg',
-  'photo-04.jpg',
-  'photo-05.jpg',
-  'photo-06.jpg',
-  'photo-07.jpg',
-  'photo-08.jpg',
-  'photo-09.jpg',
-  'photo-10.jpg',
-  'photo-11.jpg',
-  'photo-12.jpg',
-  'photo-13.jpg',
-  'photo-14.jpg',
-  'photo-15.jpg',
-  'photo-16.jpg',
-  'photo-17.jpg',
-  'photo-18.jpg',
-].sort(); // abc 순 보장
+const CONFIG = getConfig();
+
+const IMAGES = Array.from({ length: CONFIG.gallery.imageCount }, (_, i) => {
+    // i + 1을 하여 01, 02... 형태의 문자열로 만듦
+    const num = String(i + 1).padStart(2, '0');
+    return `photo-${num}.jpg`;
+  });
 
 const THUMB_DIR = 'asset/image/'+VERSION+'/gallery/thumb/';  // 썸네일 경로
 const FULL_DIR  = 'asset/image/'+VERSION+'/gallery/';         // 원본 경로
@@ -34,6 +21,13 @@ let trackBuilt    = false;
 let lastFocused   = null;
 let touchStartX   = 0;
 let touchStartY   = 0;
+
+function renderText() {
+  const descEl = document.querySelector('#galleryDescription');
+  if (descEl && CONFIG.gallery.galleryDescription) {
+    descEl.textContent = CONFIG.gallery.galleryDescription;
+  }
+}
 
 // ── 3. 그리드 렌더링 ────────────────────────────────
 function renderGrid() {
@@ -191,6 +185,7 @@ function buildLightboxTrack() {
 
 // ── 8. 초기화 ────────────────────────────────────────
 export function initGallery() {
+  renderText();
   renderGrid();
   buildLightboxTrack();
   initEvents();
