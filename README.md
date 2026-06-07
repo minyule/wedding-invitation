@@ -21,12 +21,12 @@
   - 사용하지 않을 시, useRandomVersion 를 false로 변경하고, 버전 나뉜 부분에 대해서는 1번만 작성
 - getConfig: 단순 내용 변경 시 수정해야할 부분
   - title: 첫 화면 이미지에 대한 설정
-    - text: 이미지 위에 보일 텍스트 (중간에 줄바꿈 추가하려면 <br> 작성)
+    - text: 이미지 위에 보일 텍스트 (중간에 줄바꿈 추가하려면 `<br>` 작성)
     - top: 텍스트를 위에서부터 얼마나 떨어뜨려놓을지 (ex, '9%')
     - style: 텍스트 중간에 줄바꿈 있는 경우 'innerHTML', 아니면 'textContent'
 - groom, bride, dateTime, venue: 메인 이미지 밑에 들어가는 내용
 - greeting: Invitation 항목에 들어갈 첫 인사 문구
-  - 단순 줄바꿈은 <br>, 간격이 있는 줄바꿈은 [] 내의 별도 항목으로 구성
+  - 단순 줄바꿈은 `<br>`, 간격이 있는 줄바꿈은 [] 내의 별도 항목으로 구성
 - parents: Invitation 항목의 혼주, 관계 문구
 - location: Location 항목에 들어가는 내용 (coords는 동작 안하는거 같음)
 - links: 티맵, 카카오맵, 네이버맵 버튼 눌렀을때 이동할 링크
@@ -38,7 +38,7 @@
   - imageCount: 갤러리에 포함할 이미지 개수
   - galleryDescription: 갤러리 밑에 쓰는 문구인데, 안써도 무방함
 - account: 계좌
-  - desc: 안내 문구. 단순 줄바꿈은 <br>, 간격 있는 줄바꿈은 [] 내 별도 항목 분리
+  - desc: 안내 문구. 단순 줄바꿈은 `<br>`, 간격 있는 줄바꿈은 [] 내 별도 항목 분리
   - groom, bride: 신랑측, 신부측 분리. 원하는 개수만큼 []의 항목으로 구성
 
 ## 4. 이미지 수정 방법
