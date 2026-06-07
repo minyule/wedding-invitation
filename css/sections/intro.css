@@ -127,3 +127,31 @@
   color: var(--font-primary-color);
   letter-spacing: 0.03em;
 }
+
+/* 이미지들을 감싸는 공통 컨테이너 */
+.greeting-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 방패 레이어 (이미지보다 위에서 입력을 가로챔) */
+.prevent-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: transparent;
+  -webkit-touch-callout: none; /* iOS 메뉴 차단 */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 기존 img 스타일이 부모 크기를 따르도록 수정 */
+.cover__photo img, .greeting__photo img {
+  width: 100%;
+  display: block;
+}

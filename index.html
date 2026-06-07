@@ -32,13 +32,9 @@
 
         <!-- 사진 영역 -->
         <div class="cover__photo">
-          <img
-            id="main-image"
-            alt="메인 이미지"
-            class="cover__bg"
-            loading="eager"
-            fetchpriority="high"
-          />
+          <div class="greeting-image-wrapper">
+            <img id="main-image" alt="메인 이미지" class="cover__bg" loading="eager" fetchpriority="high" />
+            <div class="prevent-overlay"></div> </div>
           <h1 class="cover__title" id="cover__title">Our Beginning</h1>
         </div>
 
@@ -74,13 +70,11 @@
 
         </div>
 
-        <!-- 반지 사진 (풀 width — inner 밖) -->
+        <!-- 중간 사진 (풀 width — inner 밖) -->
         <div class="greeting__photo">
-          <img 
-            id="sub-image"
-            alt="서브 이미지"
-            loading="lazy"
-          />
+          <div class="greeting-image-wrapper">
+            <img id="sub-image" alt="서브 이미지" loading="lazy" />
+            <div class="prevent-overlay"></div> </div>
         </div>
 
         <div class="greeting__inner">
